@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body,
+html {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%; 
+}
+
+nav {
+  color: white;
+  z-index: 2;
+  position: relative;
+  padding: 4rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav li:hover {
+  cursor: pointer;
+}
+
+nav li::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+nav li:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.title {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 2rem;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
