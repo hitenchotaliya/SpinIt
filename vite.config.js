@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: './', // Ensures proper asset linking
+    base: './', // Ensures correct relative path for assets
     build: {
-        outDir: 'dist' // Output directory for build
+        outDir: 'dist'  // Ensure built files go into 'dist'
     }
 });
