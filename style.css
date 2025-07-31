@@ -34,7 +34,7 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
-    padding: 4rem 3rem; /* Mobile padding */
+    padding: 4rem 3rem;
   }
 }
 
